@@ -1,0 +1,10 @@
+_drafts/
+_site/
+_includes/analytics.html
+_includes/claimid.html
+_includes/comment_count.html
+_includes/comment_embed.html
+_includes/comment_widget.html
+.DS_Store
+*/.DS_Store
+*.esproj

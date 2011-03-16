@@ -1,0 +1,22 @@
+--- 
+:theme: plain
+:title: Steve Murphy
+:header_color: aaa
+:name: blog
+
+url:         http://sm.net.au
+source:      .
+destination: ./_site
+auto:        false
+lsi:         true
+server_port: 4000
+pygments:    false
+exclude:     README.markdown, website.esproj
+markdown:    maruku
+permalink:   /:year/:month/:day/:title.html
+maruku:
+  use_tex:    false
+  use_divs:   false
+  png_dir:    images/latex
+  png_url:    /images/latex
+  

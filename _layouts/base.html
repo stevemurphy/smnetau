@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="content-language" content="en" />
+    <meta name="viewport" content="width = 750">
+    {% include claimid.html %}
+
+    <meta name="Robots" content="noindex,nofollow" />   
+    <meta name="author" content="Steve Murphy" />
+    <meta name="copyright" content="Copyright (c) 2010 by Steve Murphy">
+    <meta name="description" content="steve murphy blogging">
+    <meta name="keywords" content="education, teaching, learning, e-learning, teacher, professional, educator, blog, sound, sound design, sound engineer, writing, research, journal, blog">
+    
+    <link rel="icon" href="favicon.gif" />
+    <link rel="alternate" type="application/atom+xml" title="Steve Murphy" href="http://feeds.feedburner.com/steve-murphy" />
+     
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" charset="utf-8">
+    <title>{{ page.title }}</title>
+  </head>
+
+      {{ content }}
+    {% include analytics.html %}    
+  </body>
+</html>
