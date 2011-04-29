@@ -2,26 +2,18 @@
 <div id="sidebar">
   <div class="item">
     <!-- Links   -->
-    <h4>Links</h4>
-    <p>
-      <a href="http://stevemurphy.biz" class="top">stevemurphy.biz</a><br />
-      <a href="http://murph.posterous.com">murph.posterous.com</a><br />
-      <a href="http://metasmurph.com">metasmurph.com</a>
-    </p><br />
-    <p>
-    <a href="http://www.twitter.com/smurph"><img src="http://twitter-badges.s3.amazonaws.com/follow_bird-b.png" alt="Follow smurph on Twitter"/></a>
-    </p>
+    {% include links.html %}
   </div>
   <div class="item">
     <!-- Blog   -->
-    <h4><a href="atom.xml" id="rss_feed" name="rss_feed">Recent Blog Posts</a></h4>
+    <h4><a href="/atom.xml" id="rss_feed" name="rss_feed">Recent Blog Posts</a></h4>
     <p>
       {% for post in site.posts limit:10 %} 
-        <span>{{ post.date | date_to_string }}</span> &raquo; <a href=".{{ post.url }}">{{ post.title }}</a><br>
+        <span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a><br>
       {% endfor %}
     </p>
     <br />
-    <p><a href="http://feeds.feedburner.com/steve-murphy"><img src="images/feed-icon-14x14.png" alt="Subscribe to RSS Feed" class="imgleft" />Subscribe to RSS Feed</a></p>
+    <p><a href="http://feeds.feedburner.com/steve-murphy"><img src="/images/feed-icon-14x14.png" alt="Subscribe to RSS Feed" class="imgleft" />Subscribe to RSS Feed</a></p>
   </div>
   <div class="item">
   {% include comment_count.html %}

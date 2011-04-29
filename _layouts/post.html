@@ -45,33 +45,20 @@
 	      <div style="clear: both;"></div>
 	      
 	      <h3>{{ page.title }}</h3>
-        
+              <span class="postSub">{{ page.date | date_to_string }} | 
+                {% for categories in page.categories %}
+                    {{ categories }}
+                {% endfor %}
+              </span>   
+              <br />  <br />     
+              <p>
           {{ page.excerpt }}
             {{ content }}
                   
           {% include comment_embed.html %}
           
         </div>
-        <div id="sidebar">
-          <div class="item">
-			<!-- Links   -->
-			{% include links.html %}
-          </div>
-          <div class="item">
-            <!-- Blog   -->
-            <h4><a href="/atom.xml" id="rss_feed" name="rss_feed">Blog Posts</a></h4>
-            <p>
-              {% for post in site.posts %} 
-                <span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}">{{ post.title }}</a><br>
-              {% endfor %}
-            </p>
-            <br />
-            <p><a href="http://feeds.feedburner.com/steve-murphy"><img src="images/feed-icon-14x14.png" alt="Subscribe to RSS Feed" class="imgleft" />Subscribe to RSS Feed</a></p>
-          </div>
-          <div class="item">
-            {% include comment_count.html %}
-          </div>
-        </div>
+       	    {% include sidebar.html %}
       </div>
 	  {% include footer.html %}
     </div>

@@ -12,7 +12,11 @@ layout: base
         
         {% for post in site.posts limit: 1 %}
         <h2>{{ post.title }}</h2>
-        <span class="homeDate">{{ post.date | date_to_string }}</span>   
+        <span class="postSub">{{ post.date | date_to_string }} | 
+            {% for categories in post.categories %}
+                {{ categories }}
+            {% endfor %}
+        </span>   
         <br />  <br />     
         <p>
             {{ post.excerpt }}
